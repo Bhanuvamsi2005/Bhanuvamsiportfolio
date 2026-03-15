@@ -1,458 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achanta Bhanu Vamsi - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <meta name="description" content="Portfolio of Achanta Bhanu Vamsi - Full Stack Developer specializing in Django and Java development">
-    <meta name="keywords" content="Full Stack Developer, Django, Java, Web Development, Portfolio">
-    <meta name="author" content="Achanta Bhanu Vamsi">
-    <meta name="theme-color" content="#7c3aed">
-    <link rel="icon" type="image/png" href="./my profile photo (1).png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achanta Bhanu Vamsi | CS Engineer & Full-Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cabinet+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- DevIcons v2 (tech logos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-background">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="clouds"></div>
-        <div class="shooting-stars"></div>
-        <div class="asteroids">
-            <div class="asteroid asteroid-1"></div>
-            <div class="asteroid asteroid-2"></div>
-            <div class="asteroid asteroid-3"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">ABV</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand">Bhanu<span class="dot">vamsi</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      class="nav-link">About</a></li>
+      <li><a href="#skills"     class="nav-link">Skills</a></li>
+      <li><a href="#projects"   class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact"    class="nav-link">Contact</a></li>
+    </ul>
+    <a href="resume.pdf" download="Achanta_Bhanu_Vamsi_Resume.pdf" class="btn-resume">
+      <i class="fas fa-download"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid"></div>
+
+    <div class="hero-layout">
+
+      <!-- ── Left: Text ── -->
+      <div class="hero-content" data-aos="fade-right" data-aos-delay="200">
+        <div class="hero-badge">
+          <span class="badge-dot"></span> Available for Internships &amp; Collaborations
         </div>
-        <div class="galaxy-overlay"></div>
+
+        <h1 class="hero-name">
+          Achanta<br /><span class="name-accent">Bhanu Vamsi</span>
+        </h1>
+
+        <div class="hero-role">
+          <span class="role-prefix">I build</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-tagline">
+          CS undergraduate crafting full-stack platforms &amp; AI systems<br />
+          with precision, curiosity, and a CGPA of <strong>9.57</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span>Explore Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="resume.pdf" download="Achanta_Bhanu_Vamsi_Resume.pdf" class="btn-outline">
+            <i class="fas fa-file-arrow-down"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="mailto:achantabhanuvamsi@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/achanta-bhanu-vamsi/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Bhanuvamsi2005" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="tel:8341930765" class="social-icon" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Right: Profile + Stats ── -->
+      <div class="hero-right" data-aos="fade-left" data-aos-delay="400">
+
+        <!-- Profile image with orbit rings and floating chips -->
+        <div class="hero-profile-wrap">
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+
+          <div class="hero-profile-frame">
+            <!--
+              PROFILE IMAGE:
+              Place your photo at: images/profile.jpg
+              The onerror fallback shows initials if the file is missing.
+            -->
+            <img
+              src="Pi7_Passport_Photo.jpeg"
+              alt="Achanta Bhanu Vamsi"
+              class="hero-profile-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <!-- <div class="hero-profile-fallback">
+              <span>ABV</span>
+            </div> -->
+          </div>
+
+          <!-- Floating tech chips -->
+          <div class="float-chip chip-tl"><i class="devicon-react-original colored"></i><span>React</span></div>
+          <div class="float-chip chip-tr"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+          <div class="float-chip chip-bl"><i class="devicon-spring-plain colored"></i><span>Spring</span></div>
+          <div class="float-chip chip-br"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+        </div>
+
+        <!-- Stats row under profile -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-num">9.57</div>
+            <div class="stat-label">CGPA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Certs</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Bhanu Vamsi</div>
-        <ul class="nav-links">
-            <li><a href="#home" aria-label="Go to Home section">Home</a></li>
-            <li><a href="#about" aria-label="Go to About section">About</a></li>
-            <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
-            <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
-            <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero" role="banner" aria-label="Hero section">
-        <div class="hero-content" data-aos="fade-up">
-            <div class="profile-image">
-                <img src="./my profile photo (1).png" alt="Achanta Bhanu Vamsi - Professional Photo" loading="lazy">
-            </div>
-            <h1>Achanta Bhanu Vamsi</h1>
-            <h2>Btech-COMPUTER SCIENCE AND ENGINEERING</h2>
-            <p class="typing-text">Passionate about creating scalable solutions and interactive web applications</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary-btn" role="button" aria-label="Contact me">Contact Me</a>
-                <a href="#projects" class="btn secondary-btn" role="button" aria-label="View projects">View Projects</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced About Section -->
-    <section id="about" class="about" role="region" aria-label="About section">
-        <div class="container" data-aos="fade-up">
-            <div class="about-content">
-                <!-- Professional Summary -->
-                <div class="about-card">
-                    <h3><i class="fas fa-user"></i> Professional Summary</h3>
-                    <div class="summary-item">
-                        <p>I am a Full Stack Developer with expertise in Django and Java Full Stack development. Currently pursuing my B.Tech in Computer Science and Engineering at Koneru Lakshmaiah Education Foundation. I am passionate about creating scalable solutions and interactive web applications that solve real-world problems.</p>
-                        <div class="summary-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-code"></i>
-                                <span>Full Stack Development</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-laptop-code"></i>
-                                <span>Django & Java Expertise</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>B.Tech CSE Student</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Professional Experience -->
-                <div class="about-card">
-                    <h3><i class="fas fa-briefcase"></i> Professional Experience</h3>
-                    <div class="experience-item">
-                        <h4>Web Developer (Full-time)</h4>
-                        <p class="company"><i class="fas fa-building"></i> Unified Mentor</p>
-                        <p class="duration"><i class="far fa-calendar-alt"></i> June 2024 - July 2024</p>
-                        <ul class="achievements">
-                            <li>Engineered responsive web applications, improving load time by 40%</li>
-                            <li>Managed full frontend development, ensuring 98% UI/UX satisfaction</li>
-                            <li>Technologies Used: HTML5, CSS, React, Bootstrap, JavaScript</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="about-card">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <div class="education-details">
-                            <h4>Koneru Lakshmaiah Education Foundation</h4>
-                            <p class="degree"><i class="fas fa-award"></i> B.Tech - Computer Science and Engineering</p>
-                            <p class="duration"><i class="far fa-calendar-alt"></i> 2023 - 2027</p>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Guntur, India</p>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="education-details">
-                            <h4>Tirumala Junior College</h4>
-                            <p class="degree"><i class="fas fa-award"></i> Intermediate (MPC)</p>
-                            <p class="duration"><i class="far fa-calendar-alt"></i> 2021 - 2023</p>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Rajahmundry, India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Skills Section with Logos -->
-    <section id="skills" class="skills" role="region" aria-label="Skills section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-c-plain colored"></i>
-                            <span>C</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-java-plain colored"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-python-plain colored"></i>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Web Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-html5-plain colored"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-css3-plain colored"></i>
-                            <span>CSS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-bootstrap-plain colored"></i>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-javascript-plain colored"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-react-original colored"></i>
-                            <span>React JS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-flask-original"></i>
-                            <span>Flask</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-django-plain"></i>
-                            <span>Django</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-postgresql-plain colored"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-mysql-plain colored"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-sqlite-plain colored"></i>
-                            <span>SQLite</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-git-plain colored"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-github-original"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-aws-plain colored"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-vscode-plain colored"></i>
-                            <span>VS Code</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-eclipse-plain colored"></i>
-                            <span>Eclipse IDE</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-pycharm-plain colored"></i>
-                            <span>PyCharm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <div class="certification-card" data-aos="zoom-in">
-                    <div class="certification-icon">
-                        <i class="devicon-mongodb-plain colored"></i>
-                    </div>
-                    <h3>MongoDB Associate Developer</h3>
-                    <p>Professional certification in MongoDB database development and management</p>
-                    <div class="certification-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>2025</span>
-                    </div>
-                </div>
-
-              <div class="certification-card" data-aos="zoom-in">
-    <div class="certification-icon">
-        <i class="devicon-microsoftazure-original colored"></i>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
     </div>
-    <h3>Microsoft Certified Azure Fundamentals</h3>
-    <p>Certified in Microsoft Azure cloud services and solutions</p>
-    <div class="certification-date">
-        <i class="far fa-calendar-alt"></i>
-        <span>2026</span>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 01 — about</span>
+        <h2 class="section-title">The Person <span class="accent">Behind the Code</span></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Image column -->
+        <div class="about-image-wrap" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-photo-card">
+            <!--
+              PROFILE IMAGE:
+              Place your photo at: images/profile.jpg
+              Falls back to initials block if missing.
+            -->
+            <img
+              src="Pi7_Passport_Photo.jpeg"
+              alt="Achanta Bhanu Vamsi"
+              class="about-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.removeProperty('display');"
+            />
+            <div class="about-photo-fallback">
+              <div class="av-initials">ABV</div>
+              <div class="av-rings"></div>
+            </div>
+            <div class="about-photo-glow"></div>
+            <div class="photo-corner photo-corner-tl"></div>
+            <div class="photo-corner photo-corner-br"></div>
+          </div>
+
+          <div class="about-cert-stack">
+            <div class="cert-pill"><i class="fab fa-salesforce"></i> Salesforce AI Associate</div>
+            <div class="cert-pill"><i class="fas fa-leaf"></i> MongoDB Developer</div>
+            <div class="cert-pill"><i class="fab fa-microsoft"></i> Azure Fundamentals</div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+          <p class="about-lead">
+            Hey! I'm a Computer Science undergraduate at <strong>KL University</strong>, passionate about building things that are both functional and elegant.
+          </p>
+          <p>
+            I specialize in full-stack development with <strong>React.js + Spring Boot</strong> and enjoy diving into AI/ML systems using <strong>TensorFlow, PyTorch, and OpenCV</strong>. My approach blends strong algorithmic thinking with clean, responsive UI.
+          </p>
+          <p>
+            During my internship at <strong>Unified Mentor</strong>, I boosted UI responsiveness by 25% and cut page load times by 30% — small wins that fuel bigger ambitions.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-val">Guntur, Andhra Pradesh</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">University</span>
+              <span class="info-val">KL University</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Degree</span>
+              <span class="info-val">B.Tech CSE (2023–2027)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-val">achantabhanuvamsi@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS — Tech Stack Logo Grid
+       ============================================================ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 02 — skills</span>
+        <h2 class="section-title">Technical <span class="accent">Arsenal</span></h2>
+        <p class="section-sub">Technologies I work with — from frontend polish to backend power to AI pipelines.</p>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="50">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Programming Languages</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-java-plain colored"></i></div><span class="tech-name">Java</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-python-plain colored"></i></div><span class="tech-name">Python</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-c-plain colored"></i></div><span class="tech-name">C</span></div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="80">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Frontend Development</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-html5-plain colored"></i></div><span class="tech-name">HTML5</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-css3-plain colored"></i></div><span class="tech-name">CSS3</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-javascript-plain colored"></i></div><span class="tech-name">JavaScript</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-react-original colored"></i></div><span class="tech-name">React.js</span></div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="110">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Backend Technologies</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-spring-plain colored"></i></div><span class="tech-name">Spring Boot</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-flask-original" style="color:var(--text)"></i></div><span class="tech-name">Flask</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-django-plain colored"></i></div><span class="tech-name">Django</span></div>
+          <div class="tech-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#52c4ff"><i class="fas fa-plug"></i></div>
+            <span class="tech-name">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI / ML -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="140">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>AI / ML</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-tensorflow-original colored"></i></div><span class="tech-name">TensorFlow</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-pytorch-original colored"></i></div><span class="tech-name">PyTorch</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-opencv-plain colored"></i></div><span class="tech-name">OpenCV</span></div>
+          <div class="tech-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#a78bfa"><i class="fas fa-brain"></i></div>
+            <span class="tech-name">Machine Learning</span>
+          </div>
+          <div class="tech-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#34d399"><i class="fas fa-eye"></i></div>
+            <span class="tech-name">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="170">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Databases</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-mysql-plain colored"></i></div><span class="tech-name">MySQL</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-postgresql-plain colored"></i></div><span class="tech-name">PostgreSQL</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-sqlite-plain colored"></i></div><span class="tech-name">SQLite</span></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Tools</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-git-plain colored"></i></div><span class="tech-name">Git</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-github-original" style="color:var(--text)"></i></div><span class="tech-name">GitHub</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-vscode-plain colored"></i></div><span class="tech-name">VS Code</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-eclipse-plain colored"></i></div><span class="tech-name">Eclipse</span></div>
+          <div class="tech-card" data-tilt><div class="tech-icon-wrap"><i class="devicon-pycharm-plain colored"></i></div><span class="tech-name">PyCharm</span></div>
+        </div>
+      </div>
+
+      <!-- Core Concepts -->
+      <div class="tech-category" data-aos="fade-up" data-aos-delay="230">
+        <div class="tech-cat-label">
+          <span class="cat-line"></span><span>Core Concepts</span><span class="cat-line"></span>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card concept-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#f59e0b"><i class="fas fa-sitemap"></i></div>
+            <span class="tech-name">Data Structures</span>
+          </div>
+          <div class="tech-card concept-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#ec4899"><i class="fas fa-code-branch"></i></div>
+            <span class="tech-name">Algorithms</span>
+          </div>
+          <div class="tech-card concept-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#14b8a6"><i class="fas fa-cube"></i></div>
+            <span class="tech-name">OOP</span>
+          </div>
+          <div class="tech-card concept-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#6366f1"><i class="fas fa-database"></i></div>
+            <span class="tech-name">DBMS</span>
+          </div>
+          <div class="tech-card concept-card" data-tilt>
+            <div class="tech-icon-wrap custom-icon" style="--ci:#f97316"><i class="fas fa-server"></i></div>
+            <span class="tech-name">Operating Systems</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 03 — projects</span>
+        <h2 class="section-title">Things I've <span class="accent">Built</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+<!-- Project 1 -->
+<div class="project-card" data-aos="fade-up" data-aos-delay="100">
+  <div class="project-card-inner">
+
+    <div class="project-number">01</div>
+
+    <div class="project-tag-row">
+      <span class="project-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+      <span class="project-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+      <span class="project-tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+      <span class="project-tag"><i class="devicon-django-plain colored"></i> Django</span>
+      <span class="project-tag"><i class="devicon-sqlite-plain colored"></i> SQLite</span>
+    </div>
+
+    <h3 class="project-title">
+      E-commerce Platform for Agriculture
+    </h3>
+
+    <p class="project-desc">
+      Engineered a full-stack agricultural marketplace enabling farmers to sell seeds, fertilizers, and tools directly to consumers.
+    </p>
+
+    <div class="project-metrics">
+      <div class="metric">Product catalog, cart & order management</div>
+      <div class="metric"><span>25%</span> Backend speed improvement</div>
+    </div>
+
+    <div class="project-links">
+      <a href="https://github.com/Bhanuvamsi2005/bhanu" target="_blank" class="proj-link">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+
+  </div>
+  <div class="project-glow"></div>
 </div>
 
-                <div class="certification-card" data-aos="zoom-in">
-                    <div class="certification-icon">
-                        <i class="fab fa-salesforce"></i>
-                    </div>
-                    <h3>Salesforce Certified AI Associate</h3>
-                    <p>Professional certification in Salesforce AI and automation</p>
-                    <div class="certification-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>2024</span>
-                    </div>
-                </div>
 
-                <div class="certification-card" data-aos="zoom-in">
-                    <div class="certification-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Linguaskill B2 Certification</h3>
-                    <p>Advanced English language proficiency certification</p>
-                    <div class="certification-date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>2024</span>
-                    </div>
-                </div>
+<!-- Project 2 -->
+<div class="project-card" data-aos="fade-up" data-aos-delay="200">
+  <div class="project-card-inner">
+
+    <div class="project-number">02</div>
+
+    <div class="project-tag-row">
+      <span class="project-tag"><i class="devicon-react-original colored"></i> React</span>
+      <span class="project-tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+      <span class="project-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+      <span class="project-tag">JWT</span>
+    </div>
+
+    <h3 class="project-title">
+      Online Grocery Store
+    </h3>
+
+    <p class="project-desc">
+      Developed a scalable grocery e-commerce application using React.js and Spring Boot.
+      Integrated JWT authentication and REST APIs improving platform security and user session management.
+    </p>
+
+    <div class="project-links">
+      <a href="https://github.com/Bhanuvamsi2005/abvonlinegrocery" target="_blank" class="proj-link">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+
+  </div>
+  <div class="project-glow"></div>
+</div>
+
+
+<!-- Project 3 -->
+<div class="project-card" data-aos="fade-up" data-aos-delay="300">
+  <div class="project-card-inner">
+
+    <div class="project-number">03</div>
+
+    <div class="project-tag-row">
+      <span class="project-tag"><i class="devicon-python-plain colored"></i> Python</span>
+      <span class="project-tag"><i class="devicon-opencv-plain colored"></i> OpenCV</span>
+      <span class="project-tag">Computer Vision</span>
+    </div>
+
+    <h3 class="project-title">
+      Real-Time Road Hazard Detection System
+    </h3>
+
+    <p class="project-desc">
+      Implemented a computer vision system using Python and OpenCV to detect potholes and road hazards from road images.
+      Built an image preprocessing and object detection pipeline improving hazard recognition accuracy.
+    </p>
+
+  </div>
+  <div class="project-glow"></div>
+</div>
+
+
+<!-- Project 4 -->
+<div class="project-card project-card-wide" data-aos="fade-up" data-aos-delay="400">
+  <div class="project-card-inner">
+
+    <div class="project-number">04</div>
+
+    <div class="project-tag-row">
+      <span class="project-tag"><i class="devicon-react-original colored"></i> React</span>
+      <span class="project-tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+      <span class="project-tag">OpenAI API</span>
+    </div>
+
+    <h3 class="project-title">
+      AI-Powered News Aggregator
+    </h3>
+
+    <p class="project-desc">
+      Developed an intelligent news aggregator integrating real-time news scraping,
+      sentiment analysis, and AI-generated summaries using OpenAI APIs.
+      Reduced content load time by 30% using lazy loading and optimized API requests.
+      Designed responsive UI for both mobile and desktop users.
+    </p>
+
+    <div class="project-links">
+      <a href="https://github.com/Bhanuvamsi2005/bhanuvamsi" target="_blank" class="proj-link">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+
+  </div>
+  <div class="project-glow"></div>
+</div>
+
+</div>
+
+      
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE SECTION
+       ============================================================ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 04 — experience</span>
+        <h2 class="section-title">Journey &amp; <span class="accent">Achievements</span></h2>
+      </div>
+
+      <div class="exp-layout">
+
+        <div class="exp-timeline" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="exp-sub-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">May 2025 – Jun 2025</span>
+                <span class="timeline-badge">Remote</span>
+              </div>
+              <h4 class="timeline-role">Web Developer Intern</h4>
+              <h5 class="timeline-company">Unified Mentor</h5>
+              <ul class="timeline-bullets">
+                <li>Designed responsive UIs with React.js, improving responsiveness by <strong>25%</strong></li>
+                <li>Built <strong>10+ reusable</strong> frontend components, accelerating dev speed by 20%</li>
+                <li>Optimized rendering &amp; reduced page load time by <strong>30%</strong></li>
+                <li>Collaborated with a team of 4 developers via Git-based workflows</li>
+              </ul>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects" role="region" aria-label="Projects section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card" data-aos="zoom-in">
-                    <h3>E-commerce Platform for Agriculture</h3>
-                    <p>Developed an e-commerce platform connecting farmers with consumers. Integrated purchasing system for seeds, fertilizers, and farming equipment.</p>
-                    <div class="project-stats">
-                        <span>40% Efficiency Improvement</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Bhanuvamsi2005/bhanuvamsiSMS" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="project-link" 
-                           aria-label="View E-commerce Platform GitHub repository">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span>Django</span>
-                        <span>Python</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="zoom-in">
-                    <h3>AI-Powered News Aggregator</h3>
-                    <p>Created an AI-powered news aggregator providing real-time updates with optimized API calls.</p>
-                    <div class="project-stats">
-                        <span>30% Faster Data Fetch</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Bhanuvamsi2005/bhanuvamsi" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="project-link" 
-                           aria-label="View AI News Aggregator GitHub repository">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>JavaScript</span>
-                        <span>CSS</span>
-                        <span>Vite</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="zoom-in">
-                    <h3>Online Grocery Store</h3>
-                    <p>Developing an online grocery platform connecting farmers with consumers.</p>
-                    <div class="project-stats">
-                        <span>45% Market Accessibility</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Bhanuvamsi2005/abvonlinegrocery" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="project-link" 
-                           aria-label="View Online Grocery Store GitHub repository">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>JavaScript</span>
-                        <span>CSS</span>
-                        <span>Vite</span>
-                    </div>
-                </div>
+          <h3 class="exp-sub-title" style="margin-top:2.5rem"><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-period">Aug 2023 – May 2027</span>
+                <span class="timeline-badge">Guntur, AP</span>
+              </div>
+              <h4 class="timeline-role">B.Tech — Computer Science &amp; Engineering</h4>
+              <h5 class="timeline-company">Koneru Lakshmaiah Education Foundation (KL University)</h5>
+              <p style="color:var(--accent);font-weight:600;margin-top:.5rem">CGPA: 9.57 / 10</p>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact" role="region" aria-label="Contact section">
-        <div class="container" data-aos="fade-up">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:bhanuvamsia@gmail.com" aria-label="Send email to bhanuvamsia@gmail.com">bhanuvamsia@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone" aria-hidden="true"></i>
-                        <a href="tel:+918341930765" aria-label="Call +91 8341930765">+91 8341930765</a>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event)">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Your Message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-loader"></span>
-                    </button>
-                    <div id="form-status" class="form-status"></div>
-                </form>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/achanta-bhanu-vamsi/" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon" 
-                       aria-label="Visit LinkedIn profile">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/Bhanuvamsi2005" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon" 
-                       aria-label="Visit GitHub profile">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a href="mailto:bhanuvamsia@gmail.com" 
-                       class="social-icon" 
-                       aria-label="Send email to bhanuvamsia@gmail.com">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </a>
-                </div>
+        <div class="exp-certs" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="exp-sub-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="cert-card">
+            <div class="cert-icon cert-sf"><i class="fab fa-salesforce"></i></div>
+            <div class="cert-info">
+              <h4>Salesforce Certified AI Associate</h4>
+              <p>Salesforce — Official Credential</p>
             </div>
-        </div>
-    </section>
+            <div class="cert-badge">✓</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon cert-mongo"><i class="fas fa-leaf"></i></div>
+            <div class="cert-info">
+              <h4>MongoDB Certified Associate Developer</h4>
+              <p>MongoDB University — Official Credential</p>
+            </div>
+            <div class="cert-badge">✓</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon cert-azure"><i class="fab fa-microsoft"></i></div>
+            <div class="cert-info">
+              <h4>Microsoft Certified: Azure Fundamentals</h4>
+              <p>Microsoft — AZ-900</p>
+            </div>
+            <div class="cert-badge">✓</div>
+          </div>
+          <div class="cert-card">
+  <div class="cert-icon cert-azure"><i class="fas fa-language"></i></div>
+  <div class="cert-info">
+    <h4>Linguaskill B2 Certification</h4>
+    <p>Cambridge Assessment English</p>
+  </div>
+  <div class="cert-badge">✓</div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Achanta Bhanu Vamsi. All rights reserved.</p>
+          <!-- <h3 class="exp-sub-title" style="margin-top:2rem"><i class="fas fa-chart-bar"></i> Impact Metrics</h3>
+          <div class="metrics-row">
+            <div class="impact-card">
+              <div class="impact-num" data-target="25">0</div>
+              <div class="impact-label">% UI Responsiveness Boost</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-num" data-target="30">0</div>
+              <div class="impact-label">% Page Load Reduction</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-num" data-target="10">0</div>
+              <div class="impact-label">+ Reusable Components</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-num" data-target="9">0</div>
+              <div class="impact-label">.57 CGPA Score</div>
+            </div> -->
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            // Initialize EmailJS with your public key
-            emailjs.init("Gq9JtQMLvkWCrkf2j");
-        })();
-    </script>
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">// 05 — contact</span>
+        <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+      </div>
+
+      <div class="contact-layout">
+
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+          <p class="contact-lead">
+            Whether it's an internship opportunity, a project collaboration, or just a chat about tech — my inbox is always open.
+          </p>
+          <div class="contact-items">
+            <a href="mailto:achantabhanuvamsi@gmail.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div class="ci-text">
+                <span class="ci-label">Email</span>
+                <span class="ci-val">achantabhanuvamsi@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:8341930765" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div class="ci-text">
+                <span class="ci-label">Phone</span>
+                <span class="ci-val">+91 8341930765</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/achanta-bhanu-vamsi/" target="_blank" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="ci-text">
+                <span class="ci-label">LinkedIn</span>
+                <span class="ci-val">linkedin.com/in/bhanuvamsi</span>
+              </div>
+            </a>
+            <a href="https://github.com/Bhanuvamsi2005" target="_blank" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-github"></i></div>
+              <div class="ci-text">
+                <span class="ci-label">GitHub</span>
+                <span class="ci-val">github.com/bhanuvamsi</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" data-aos="fade-left" data-aos-delay="200" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromName">Your Name</label>
+              <input type="text" id="fromName" name="from_name" placeholder="Bhanu vamsi" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="fromEmail">Your Email</label>
+              <input type="email" id="fromEmail" name="from_email" placeholder="you@gmail.com" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
+            <span class="form-error" id="msgError"></span>
+          </div>
+          <button type="submit" class="btn-send" id="sendBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+            <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+          </button>
+          <div id="formStatus" class="form-status" role="alert"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">ABV<span class="dot">.</span></div>
+      <p class="footer-copy">Designed &amp; Built by <strong>Achanta Bhanu Vamsi</strong> — 2025</p>
+      <div class="footer-socials">
+        <a href="mailto:achantabhanuvamsi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
