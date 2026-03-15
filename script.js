@@ -426,7 +426,7 @@ function sendEmail(e) {
     };
     
     // Send email using EmailJS
-    emailjs.send('service_ecg5w9w', 'template_uxmy8c9', templateParams, 'Gq9JtQMLvkWCrkf2j')
+    emailjs.send('service_9achglp', 'template_uxmy8c9', templateParams, 'Gq9JtQMLvkWCrkf2j')
         .then(() => {
             showFormStatus(statusDiv, 'Message sent successfully! I will get back to you soon.', 'success');
             form.reset();
