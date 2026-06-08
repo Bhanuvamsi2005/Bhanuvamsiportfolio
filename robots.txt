@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bhanuvamsiportfolio.vercel.app/sitemap.xml
